@@ -1,0 +1,72 @@
+.example-form {
+    min-width: 150px;
+    max-width: 40%;
+    width: 100%;
+    padding-left:100px;
+    padding-top:20px;
+    margin-left:500px;
+
+  }
+ 
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .mini{
+ width: 100%;
+ height:50px;
+  background-color: darkgray;
+
+  }
+
+  .body
+  {
+    background-color:lightgrey;
+  
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,1), 
+                    0 1px 1px 0 rgba(0,0,0,1), 
+                    0 1px 3px 0 rgba(0,0,0,1);
+   
+  }
+  .title{
+    /* padding-left:20px; */
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+  }
+
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  .buttoncenter{
+    margin-left:370px;
+    background-color: green;
+  }

@@ -1,0 +1,74 @@
+<div >
+<div class="mini"></div>
+<form class="example-form">
+<mat-card class="body">
+ 
+  <mat-card-header></mat-card-header>
+  <mat-card-title class="title"> Employee Details</mat-card-title>
+  <mat-card-content >
+ <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First Name" required value="">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name" required value="">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" required>
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Phone</mat-label>
+    <input matInput  type="tel" placeholder="Phone" value="" required>
+  </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+             placeholder="Ex. pat@example.com">
+      <mat-hint></mat-hint>
+      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+        <mat-error>Please enter a valid email address</mat-error>
+      }
+      @if (emailFormControl.hasError('required')) {
+        <mat-error>Email is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
+
+    <section class="example-section">
+      <mat-checkbox   (change)="toggle($event)"class="example-margin">Please accept the Terms and conditions</mat-checkbox>
+     
+    </section>
+    
+  
+ 
+  
+      
+      <!-- <div class="example-button-row title"> -->
+      
+        <button mat-raised-button color="primary" class="buttoncenter success" [disabled]="showButton">Submit</button>
+       
+      <!-- </div> -->
+
+
+</mat-card-content>
+</mat-card>
+</form>
+
+</div>
+<!-- Trying Radio Button -->
+<!-- <mat-radio-group aria-label="Select an option">
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group> -->
